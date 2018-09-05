@@ -14,6 +14,8 @@ class Config(config: Configuration) {
 
   val PostgreSqlURL = config.getString("postgresqldb.url").getOrElse("testing")
 
+  val ElasticsearchURL = config.getString("elasticsearch.url").getOrElse("testing")
+
   val AsterixLang = config.getString("asterixdb.lang").getOrElse("sqlpp").toLowerCase
 
   val UserTimeOut = config.getString("actor.user.timeout").map(parseTimePair).getOrElse(60 seconds)
