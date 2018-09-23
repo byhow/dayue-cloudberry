@@ -2,6 +2,8 @@ import Dependencies._
 
 name := "cloudberry"
 
+scalaVersion := "2.11.7"
+
 lazy val zion = (project in file("zion")).
   settings(Commons.settings: _*).
   settings(
